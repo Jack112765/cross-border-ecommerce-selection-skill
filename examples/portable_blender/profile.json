@@ -1,0 +1,129 @@
+{
+  "category": "portable_blender",
+  "display_name": "Portable Blender",
+  "display_name_zh": "便携榨汁杯",
+  "target_market": "US cross-border ecommerce",
+  "research_mode": "user_problem_first",
+  "search_need": "Prioritize real customer problems for portable blenders; use media reviews only as background.",
+  "search_need_zh": "优先采集便携榨汁杯真实用户问题，媒体评测和购物文章只能作为背景材料，不能作为选品优化主证据。",
+  "primary_source_types": [
+    "ecommerce_review",
+    "ecommerce_qa",
+    "reddit_thread",
+    "youtube_comment",
+    "tiktok_comment",
+    "support_forum"
+  ],
+  "secondary_source_types": [
+    "expert_review",
+    "shopping_article",
+    "trend_article",
+    "news_recall"
+  ],
+  "source_quota": {
+    "min_user_problem_rows": 10,
+    "min_negative_or_question_rows": 7,
+    "max_media_rows": 3,
+    "min_distinct_user_sources": 3
+  },
+  "reject_rules": {
+    "reject_if_media_only": true,
+    "reject_if_no_user_problem": true,
+    "reject_if_generic_praise_only": true
+  },
+  "must_include_keywords": [
+    "portable blender",
+    "personal blender",
+    "cordless blender",
+    "BlendJet",
+    "Ninja Blast",
+    "Nutribullet Flex",
+    "Nutribullet Flip"
+  ],
+  "nice_to_have_keywords": [
+    "smoothie",
+    "protein shake",
+    "gym",
+    "travel",
+    "usb",
+    "usb-c",
+    "ice",
+    "frozen"
+  ],
+  "exclude_keywords": [
+    "full size blender",
+    "commercial blender",
+    "food processor",
+    "jug blender",
+    "replacement blade",
+    "spare cup"
+  ],
+  "positive_dimensions": {
+    "portability": ["travel", "gym", "cordless", "lightweight", "on the go", "portable cup"],
+    "convenience": ["easy", "quick", "dishwasher-safe", "dishwasher safe", "detachable", "usb", "usb-c", "battery indicator", "preset"],
+    "power": ["powerful", "strong enough", "crushes ice", "crush ice", "strong motor", "smooth result"],
+    "quiet": ["quiet", "low noise"],
+    "insulation": ["insulation", "keeps ice", "cold retention", "keeps drinks cold"],
+    "leak_resistance": ["leakproof", "secure sip lid", "sealed lid"],
+    "battery": ["drinks on one charge", "on one charge", "battery indicator"]
+  },
+  "negative_dimensions": {
+    "power": ["weak", "not powerful", "cannot crush", "can't crush", "struggles with", "bog down", "gave up", "not enough torque", "less torque"],
+    "battery": ["battery dies", "won't charge", "does not charge", "charging time", "slow charge", "three hours to charge", "only three smoothies", "eight cycles", "few complete smoothies", "repeated cycles", "cycles vary"],
+    "cleaning": ["hard to clean", "difficult to clean", "without dishwasher", "not removable", "residue", "smell", "tricky cleaning", "rinsing awkward", "cleaning is trickier"],
+    "leaking": ["leaking", "leakage", "spill", "spilled", "seal issue", "lid leakage"],
+    "safety": ["overheat", "overheating", "recall", "fire", "burn", "laceration", "blade breaking"],
+    "noise": ["loud", "noisy", "decibel", "db"],
+    "usage_sensitivity": ["ingredient order", "wrong order", "shake and start again"]
+  },
+  "dimension_labels_zh": {
+    "portability": "便携性",
+    "convenience": "使用便利性",
+    "power": "搅拌动力",
+    "quiet": "低噪音",
+    "insulation": "保冷能力",
+    "leak_resistance": "防漏能力",
+    "battery": "续航/充电",
+    "cleaning": "清洁便利性",
+    "leaking": "漏液风险",
+    "safety": "安全风险",
+    "noise": "噪音风险",
+    "usage_sensitivity": "使用门槛"
+  },
+  "improvement_rules": {
+    "power": "Set frozen-fruit, ice, and thick-ingredient performance gates before sourcing; avoid overclaiming plug-in blender performance.",
+    "battery": "Validate real smoothies per charge, real charge time, cable length, and whether the product can blend while plugged in.",
+    "cleaning": "Prefer removable blade base, wider cup mouth, and dishwasher-safe contact parts.",
+    "leaking": "Run side-position, bag-carry, and lid-lock leak tests.",
+    "safety": "Require battery safety, thermal cutoff, motor lock, blade integrity, and certification checklist.",
+    "noise": "Measure dB under frozen-fruit load; avoid office/gym positioning if noise is too high.",
+    "usage_sensitivity": "Add onboarding instructions for ingredient order and liquid-first blending; test failure cases."
+  },
+  "improvement_rules_zh": {
+    "power": "在选品前设置冻果、冰块、浓稠食材测试门槛，避免宣传成插电式破壁机性能。",
+    "battery": "验证真实一杯饮品所需循环次数、满电可完成杯数、真实充电时间、线材长度，以及是否支持边充边打。",
+    "cleaning": "优先选择可拆刀座、宽杯口、接触食材部件可洗碗机清洗的结构。",
+    "leaking": "增加侧放、包内携带、杯盖锁止和密封圈耐久测试。",
+    "safety": "建立电池安全、过热断电、电机锁止、刀片强度和认证清单。",
+    "noise": "在冻果负载下测量分贝；若噪音过高，避免主打办公室/健身房安静场景。",
+    "usage_sensitivity": "补充液体优先和投料顺序引导，并把错误投料作为测试用例。"
+  },
+  "supplier_tests_zh": {
+    "power": "用冻香蕉、冰块、蛋白粉和少量液体做三轮连续测试，记录卡刀和残留块。",
+    "battery": "用真实 smoothie 配方测试满电可完成杯数和充电耗时。",
+    "cleaning": "测试杯口、刀座、密封圈和残留异味，记录是否可拆洗。",
+    "leaking": "满杯后侧放、倒置、包内晃动 30 分钟，检查漏液。",
+    "safety": "连续运行后检查机身温度、刀片固定和电池保护。",
+    "noise": "在 1 米距离测试冻果负载噪音。",
+    "usage_sensitivity": "故意错误投料，验证是否需要用户摇晃或重启。"
+  },
+  "listing_guardrails_zh": {
+    "power": "不要夸大 crush ice，必须说明液体比例和可处理食材边界。",
+    "battery": "不要只写 cycles，要写真实配方下可完成杯数和充电时间。",
+    "cleaning": "不要只写 easy clean，必须说明可拆洗部件和洗碗机兼容性。",
+    "leaking": "不要只写 leakproof，必须展示杯盖锁止和包内携带测试。",
+    "safety": "不要弱化电池、过热和刀片风险，必须说明安全保护。",
+    "noise": "不要只写 quiet，必须给出负载条件或避免办公室安静场景。",
+    "usage_sensitivity": "不要把复杂投料步骤藏起来，应给出液体优先和食材顺序说明。"
+  }
+}

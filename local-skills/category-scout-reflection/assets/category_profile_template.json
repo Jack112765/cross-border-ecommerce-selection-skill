@@ -1,0 +1,96 @@
+{
+  "category": "todo_category",
+  "display_name": "TODO Product Category",
+  "display_name_zh": "待填写品类",
+  "target_market": "US cross-border ecommerce",
+  "research_mode": "user_problem_first",
+  "search_need": "Find real user problems that can guide product selection, supplier testing, and listing claims.",
+  "search_need_zh": "优先采集真实用户评论、问答和社媒讨论，提取可聚类的用户问题。",
+  "primary_source_types": [
+    "ecommerce_review",
+    "ecommerce_qa",
+    "reddit_thread",
+    "youtube_comment",
+    "tiktok_comment",
+    "support_forum"
+  ],
+  "secondary_source_types": [
+    "expert_review",
+    "shopping_article",
+    "trend_article",
+    "news_recall"
+  ],
+  "source_quota": {
+    "min_user_problem_rows": 10,
+    "min_negative_or_question_rows": 7,
+    "max_media_rows": 3,
+    "max_media_ratio": 0.2,
+    "min_distinct_user_sources": 3,
+    "min_distinct_platforms": 1,
+    "min_distinct_products": 1,
+    "min_distinct_brands": 0,
+    "min_top_problem_support_rows": 1
+  },
+  "reject_rules": {
+    "reject_if_media_only": true,
+    "reject_if_no_user_problem": true,
+    "reject_if_generic_praise_only": true
+  },
+  "must_include_keywords": [
+    "todo product keyword"
+  ],
+  "nice_to_have_keywords": [
+    "cleaning",
+    "noise",
+    "reliability",
+    "size",
+    "safety"
+  ],
+  "exclude_keywords": [
+    "accessory",
+    "replacement part",
+    "manual"
+  ],
+  "negative_dimensions": {
+    "cleaning": ["clean", "cleaning", "wash", "residue", "smell"],
+    "noise": ["noise", "noisy", "loud", "rattle"],
+    "reliability": ["stopped working", "failed", "error", "broken"],
+    "size": ["heavy", "bulky", "too large", "hard to move"],
+    "safety": ["leak", "overheat", "burn", "smell", "unsafe"]
+  },
+  "dimension_labels_zh": {
+    "cleaning": "清洁/维护",
+    "noise": "噪音",
+    "reliability": "可靠性",
+    "size": "尺寸/重量",
+    "safety": "安全风险"
+  },
+  "improvement_rules": {
+    "cleaning": "Define category-specific cleaning or maintenance requirements after reviewing user evidence.",
+    "noise": "Define category-specific noise measurement requirements after reviewing user evidence.",
+    "reliability": "Define category-specific reliability checks after reviewing user evidence.",
+    "size": "Define category-specific size, weight, and handling constraints after reviewing user evidence.",
+    "safety": "Define category-specific safety checks after reviewing user evidence."
+  },
+  "improvement_rules_zh": {
+    "cleaning": "根据用户证据定义该品类的清洁/维护参数。",
+    "noise": "根据用户证据定义该品类的噪音测试条件。",
+    "reliability": "根据用户证据定义该品类的可靠性检查项。",
+    "size": "根据用户证据定义该品类的尺寸、重量和搬运约束。",
+    "safety": "根据用户证据定义该品类的安全检查项。"
+  },
+  "supplier_tests_zh": {
+    "cleaning": "补采用户证据后定义清洁/维护测试。",
+    "noise": "补采用户证据后定义噪音测试。",
+    "reliability": "补采用户证据后定义连续运行、故障恢复或耐久测试。",
+    "size": "补采用户证据后定义尺寸、重量和搬运测试。",
+    "safety": "补采用户证据后定义安全测试。"
+  },
+  "listing_guardrails_zh": {
+    "cleaning": "没有真实用户证据前，不夸大 easy clean 或 low maintenance。",
+    "noise": "没有测试条件前，不笼统宣传 quiet。",
+    "reliability": "没有可靠性证据前，不承诺长期无故障。",
+    "size": "明确尺寸、重量和适用场景，避免泛泛宣传 compact。",
+    "safety": "没有认证或测试证据前，不弱化安全风险。"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Category Scout Reflection"
+  short_description: "Find real user problems for product selection."
+  default_prompt: "Use $category-scout-reflection to score real user problems for a product category and produce supplier tests, product parameters, and listing guardrails."

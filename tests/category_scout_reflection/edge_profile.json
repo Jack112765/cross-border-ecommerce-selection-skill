@@ -1,0 +1,49 @@
+{
+  "category": "portable_blender",
+  "display_name": "Portable Blender Edge Test",
+  "display_name_zh": "便携榨汁杯边界测试",
+  "target_market": "US",
+  "research_mode": "user_problem_first",
+  "search_need": "Test user-problem-first scoring edge cases.",
+  "search_need_zh": "测试用户问题优先评分的边界情况。",
+  "primary_source_types": ["ecommerce_review", "ecommerce_qa", "reddit_thread", "youtube_comment", "tiktok_comment", "support_forum"],
+  "secondary_source_types": ["expert_review", "shopping_article", "trend_article", "news_recall"],
+  "source_quota": {
+    "min_user_problem_rows": 1,
+    "min_negative_or_question_rows": 1,
+    "max_media_rows": 1,
+    "min_distinct_user_sources": 1
+  },
+  "reject_rules": {
+    "reject_if_media_only": true,
+    "reject_if_no_user_problem": true,
+    "reject_if_generic_praise_only": true
+  },
+  "must_include_keywords": ["portable blender", "personal blender"],
+  "nice_to_have_keywords": ["smoothie", "travel", "usb-c"],
+  "exclude_keywords": ["commercial blender", "food processor"],
+  "negative_dimensions": {
+    "power": ["struggles with", "not powerful", "chunks"],
+    "battery": ["three hours to charge", "battery dies"],
+    "cleaning": ["hard to clean", "residue"],
+    "leaking": ["leaking", "spill"]
+  },
+  "dimension_labels_zh": {
+    "power": "搅拌动力",
+    "battery": "续航/充电",
+    "cleaning": "清洁便利性",
+    "leaking": "漏液风险"
+  },
+  "improvement_rules": {
+    "power": "Run frozen fruit test.",
+    "battery": "Validate real charge time.",
+    "cleaning": "Prefer removable blade base.",
+    "leaking": "Run side-position leak tests."
+  },
+  "improvement_rules_zh": {
+    "power": "测试冻果和冰块表现。",
+    "battery": "验证真实充电时间。",
+    "cleaning": "优先选择可拆刀座。",
+    "leaking": "做侧放漏液测试。"
+  }
+}

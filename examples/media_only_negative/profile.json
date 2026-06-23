@@ -1,0 +1,92 @@
+{
+  "category": "countertop_ice_maker_media_only",
+  "display_name": "Countertop Ice Maker Media Only Negative",
+  "display_name_zh": "媒体堆料反例",
+  "target_market": "US cross-border ecommerce",
+  "research_mode": "user_problem_first",
+  "search_need": "Prove that media-only category research cannot pass user-problem evidence review.",
+  "search_need_zh": "验证只有媒体评测/购物文章时，不能通过真实用户问题证据审查。",
+  "primary_source_types": [
+    "ecommerce_review",
+    "ecommerce_qa",
+    "reddit_thread",
+    "youtube_comment",
+    "tiktok_comment",
+    "support_forum"
+  ],
+  "secondary_source_types": [
+    "expert_review",
+    "shopping_article",
+    "trend_article",
+    "news_recall"
+  ],
+  "source_quota": {
+    "min_user_problem_rows": 3,
+    "min_negative_or_question_rows": 2,
+    "max_media_rows": 3,
+    "max_media_ratio": 0.2,
+    "min_distinct_user_sources": 2,
+    "min_distinct_platforms": 2,
+    "min_distinct_products": 2,
+    "min_distinct_brands": 0,
+    "min_top_problem_support_rows": 2
+  },
+  "reject_rules": {
+    "reject_if_media_only": true,
+    "reject_if_no_user_problem": true,
+    "reject_if_generic_praise_only": true
+  },
+  "must_include_keywords": [
+    "countertop ice maker",
+    "portable ice maker",
+    "ice maker machine"
+  ],
+  "nice_to_have_keywords": [
+    "cleaning",
+    "noise",
+    "drain",
+    "descale",
+    "melting"
+  ],
+  "exclude_keywords": [
+    "commercial ice machine",
+    "refrigerator ice maker",
+    "ice tray",
+    "replacement filter"
+  ],
+  "negative_dimensions": {
+    "cleaning": ["clean", "cleaning", "descale", "scale"],
+    "noise": ["noise", "noisy", "loud", "dba"],
+    "drainage": ["drain", "draining", "bottom drain"],
+    "melting": ["melt", "melting", "ice melts"],
+    "reliability": ["stopped working", "error", "failed"]
+  },
+  "dimension_labels_zh": {
+    "cleaning": "清洗/除垢",
+    "noise": "噪音",
+    "drainage": "排水",
+    "melting": "融化/储冰",
+    "reliability": "可靠性"
+  },
+  "improvement_rules_zh": {
+    "cleaning": "媒体只能提示可能关注清洁，但不能替代用户问题证据。",
+    "noise": "媒体只能提示可能关注噪音，但不能替代用户问题证据。",
+    "drainage": "媒体只能提示可能关注排水，但不能替代用户问题证据。",
+    "melting": "媒体只能提示可能关注储冰，但不能替代用户问题证据。",
+    "reliability": "媒体只能提示可能关注可靠性，但不能替代用户问题证据。"
+  },
+  "supplier_tests_zh": {
+    "cleaning": "补采真实用户清洁/除垢证据后再定义测试。",
+    "noise": "补采真实用户噪音证据后再定义测试。",
+    "drainage": "补采真实用户排水证据后再定义测试。",
+    "melting": "补采真实用户融化/储冰证据后再定义测试。",
+    "reliability": "补采真实用户可靠性证据后再定义测试。"
+  },
+  "listing_guardrails_zh": {
+    "cleaning": "没有真实用户证据前，不把媒体观点写成用户痛点。",
+    "noise": "没有真实用户证据前，不把媒体观点写成用户痛点。",
+    "drainage": "没有真实用户证据前，不把媒体观点写成用户痛点。",
+    "melting": "没有真实用户证据前，不把媒体观点写成用户痛点。",
+    "reliability": "没有真实用户证据前，不把媒体观点写成用户痛点。"
+  }
+}

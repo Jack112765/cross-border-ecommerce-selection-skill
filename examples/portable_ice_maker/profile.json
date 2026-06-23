@@ -1,0 +1,110 @@
+{
+  "category": "portable_ice_maker",
+  "display_name": "Portable Ice Maker",
+  "display_name_zh": "台式制冰机",
+  "target_market": "US cross-border ecommerce",
+  "research_mode": "user_problem_first",
+  "search_need": "Find repeated customer problems that can guide product selection, supplier testing, and listing claims for portable countertop ice makers.",
+  "search_need_zh": "优先采集台式制冰机真实用户评论、问答和社媒讨论，提取可转产品参数和打样测试项的用户问题。",
+  "primary_source_types": [
+    "ecommerce_review",
+    "ecommerce_qa",
+    "reddit_thread",
+    "youtube_comment",
+    "tiktok_comment",
+    "support_forum"
+  ],
+  "secondary_source_types": [
+    "expert_review",
+    "shopping_article",
+    "trend_article",
+    "news_recall"
+  ],
+  "source_quota": {
+    "min_user_problem_rows": 10,
+    "min_negative_or_question_rows": 7,
+    "max_media_rows": 3,
+    "max_media_ratio": 0.2,
+    "min_distinct_user_sources": 5
+  },
+  "reject_rules": {
+    "reject_if_media_only": true,
+    "reject_if_no_user_problem": true,
+    "reject_if_generic_praise_only": true
+  },
+  "must_include_keywords": [
+    "portable ice maker",
+    "countertop ice maker",
+    "ice maker machine",
+    "nugget ice maker"
+  ],
+  "nice_to_have_keywords": [
+    "cleaning",
+    "noise",
+    "melting",
+    "drain",
+    "descale",
+    "hard water",
+    "stopped working"
+  ],
+  "exclude_keywords": [
+    "commercial ice machine",
+    "refrigerator ice maker",
+    "ice tray",
+    "replacement filter"
+  ],
+  "negative_dimensions": {
+    "cleaning": ["clean", "cleaning", "descale", "scale", "mold", "slime", "smell"],
+    "noise": ["noise", "noisy", "loud", "dba", "rattle", "clatter"],
+    "melting": ["melt", "melting", "not frozen", "ice melts", "store ice"],
+    "size": ["heavy", "bulky", "too large", "hard to move", "counter space"],
+    "drainage": ["drain", "draining", "water left", "bottom drain", "side drain"],
+    "reliability": ["stopped working", "error", "quit", "failed", "compressor"],
+    "safety": ["leak", "overheat", "burn", "smell", "electrical"]
+  },
+  "dimension_labels_zh": {
+    "cleaning": "清洗/除垢",
+    "noise": "噪音",
+    "melting": "融化/储冰",
+    "size": "重量/体积",
+    "drainage": "排水",
+    "reliability": "可靠性",
+    "safety": "安全风险"
+  },
+  "improvement_rules": {
+    "cleaning": "Prioritize removable water-path parts, visible cleaning access, self-clean cycle, and descaling reminders.",
+    "noise": "Measure steady operating dBA and ice-drop peak dBA before listing quiet claims.",
+    "melting": "Treat the basket as temporary holding, improve insulation where possible, and clearly state that it is not a freezer.",
+    "size": "Control net weight, footprint, handle position, and under-cabinet clearance.",
+    "drainage": "Avoid bottom-only drain designs or prove they can be drained without lifting a full machine.",
+    "reliability": "Run continuous-operation checks for pump, compressor, water-level sensor, full-ice sensor, and error recovery.",
+    "safety": "Check leak, overheating, odor, and electrical safety before sourcing."
+  },
+  "improvement_rules_zh": {
+    "cleaning": "优先选择可见水路、可拆触水部件、自动清洁和除垢提醒设计。",
+    "noise": "分别测试稳定运行 dBA 和落冰瞬时 dBA，避免只写 quiet。",
+    "melting": "明确冰篮不是冷冻储冰，并评估冰篮保温结构和融化回流水设计。",
+    "size": "控制整机重量、占地、把手位置和橱柜下方可放置高度。",
+    "drainage": "避免仅底部排水，或证明满水状态下无需搬起机器也能排水。",
+    "reliability": "验证水泵、压缩机、水位、满冰传感器和错误恢复，记录连续运行故障率。",
+    "safety": "检查漏水、过热、异味和电气安全。"
+  },
+  "supplier_tests_zh": {
+    "cleaning": "连续 14 天使用硬水，记录水垢、异味、拆洗步骤、清洁耗时和是否需要工具。",
+    "noise": "在 1 米距离测试稳定运行噪音和落冰瞬时噪音，分别记录 dBA。",
+    "melting": "室温 24C 下记录冰篮 30/60/120 分钟融化率，并验证融水回流是否污染新冰。",
+    "size": "记录净重、满水重量、外形尺寸、把手受力和橱柜下方放置/取水动作。",
+    "drainage": "在台面、靠墙和水槽旁三种场景排水，记录是否需要搬起机器和漏水风险。",
+    "reliability": "连续运行 24/72 小时，记录停机、错误码、恢复方式和产冰量衰减。",
+    "safety": "进行漏水、过热、电源线、异味和食品接触材料检查。"
+  },
+  "listing_guardrails_zh": {
+    "cleaning": "不要只写 easy clean，必须说明排水、除垢、可拆部件和清洁频率。",
+    "noise": "不要笼统宣传 quiet，必须给出测试距离、运行场景和 dBA。",
+    "melting": "不要暗示能冷冻储冰，应说明冰篮不是 freezer，需要转移到冰箱长期保存。",
+    "size": "不要只写 compact，要标清净重、尺寸、橱柜下高度和排水动作。",
+    "drainage": "不要忽略排水位置，图文说明排水路径和是否需要搬动整机。",
+    "reliability": "不要承诺连续不停机，说明保护机制、错误提示和建议使用节奏。",
+    "safety": "不要弱化漏水/过热/异味风险，明确认证和安全保护。"
+  }
+}

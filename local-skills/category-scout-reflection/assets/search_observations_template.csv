@@ -1,0 +1,2 @@
+item_id,source_type,source_name,url,screenshot_path,title,product_or_topic,evidence_text,raw_user_quote,user_problem,problem_dimension,polarity,captured_date
+OBS001,ecommerce_review,Example Store,https://example.com/product/reviews/review-001,,Example product customer reviews,Example Portable Ice Maker,"Review text: Hard water made scale build up after a week and I had to clean the machine constantly.","Hard water made scale build up after a week.","User complains hard water creates scale and frequent cleaning.",cleaning,negative,2026-06-23
