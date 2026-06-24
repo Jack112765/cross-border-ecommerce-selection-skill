@@ -81,7 +81,7 @@ tests/
 
 ## 快速运行
 
-运行 golden sample：
+核心脚本只使用 Python 标准库。Fresh clone 后可以先运行 golden sample：
 
 ```bash
 ./scripts/run_real_sample.sh
@@ -97,17 +97,34 @@ examples/portable_ice_maker/output/
   scored_observations_zh.csv
 ```
 
-运行全量检查：
+运行核心回归测试和三个样例，不需要安装额外依赖：
 
 ```bash
+python3 ./scripts/run_skill_tests.py
+./scripts/run_real_sample.sh
+./scripts/run_blender_sample.sh
+./scripts/run_media_only_negative.sh
+```
+
+如果要运行包含 Codex Skill manifest 校验的全量检查，需要先安装 PyYAML 到本地依赖目录：
+
+```bash
+python3 -m pip install --target .local-python-packages -r requirements.txt
 ./scripts/run_all_samples.sh
 ```
 
-如果要运行官方 Skill manifest 校验，需要安装 PyYAML：
+也可以只单独运行 manifest 校验：
+
+```bash
+PYTHONPATH=.local-python-packages ./scripts/validate_skill.sh
+```
+
+生成的 output、本地依赖和 zip 都已在 `.gitignore` 中排除。
+
+如果只想安装到全局或当前 Python 环境：
 
 ```bash
 python3 -m pip install -r requirements.txt
-PYTHONPATH=.local-python-packages ./scripts/validate_skill.sh
 ```
 
 ## 新品类脚手架

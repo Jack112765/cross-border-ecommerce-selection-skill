@@ -11,27 +11,38 @@ This repository contains a reproducible Codex skill package for user-problem-fir
 
 The package does not require network access, API keys, package installation, or Codex runtime access to verify the scoring script. It uses only Python 3 standard library modules.
 
+From the project root:
+
 ```bash
-../scripts/run_real_sample.sh
+./scripts/run_real_sample.sh
 ```
 
 Expected outputs:
 
-- `/tmp/category-scout-output/scored_observations.csv`
-- `/tmp/category-scout-output/scored_observations_zh.csv`
-- `/tmp/category-scout-output/reflection_report.md`
-- `/tmp/category-scout-output/dashboard.html`
+- `examples/portable_ice_maker/output/scored_observations.csv`
+- `examples/portable_ice_maker/output/scored_observations_zh.csv`
+- `examples/portable_ice_maker/output/reflection_report.md`
+- `examples/portable_ice_maker/output/dashboard.html`
 
-To run regression checks from this repository root:
+To run core regression checks from the project root:
 
 ```bash
-python3 tests/test_category_scout_reflection.py
+python3 ./scripts/run_skill_tests.py
 ```
 
-From the project root, HR can also run:
+To run all samples plus the Codex Skill manifest validator, install PyYAML first:
 
 ```bash
+python3 -m pip install --target .local-python-packages -r requirements.txt
 ./scripts/run_all_samples.sh
+```
+
+If PyYAML is not installed, run the sample scripts individually instead:
+
+```bash
+./scripts/run_real_sample.sh
+./scripts/run_blender_sample.sh
+./scripts/run_media_only_negative.sh
 ```
 
 ## Optional Codex Skill Install
